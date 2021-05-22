@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Card({id,name,email}) {
   return (
     <div className="grow dib no-underline bg-light-green black-90 pa3 tc br3 ma2">

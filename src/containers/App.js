@@ -1,38 +1,44 @@
-import React,{Component} from 'react';
+import React,{Component} from 'react'
 import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox'
 import Scroll from '../components/Scroll'
 import ErrorBoundary from '../components/ErrorBoundary'
 import './App.css';
+import { connect } from 'react-redux'
+import {sfAction,rrAction} from '../actions'
+
+const mapStateToProps = (state) => {
+  return{
+    searchField:state.sfReducer.searchField,
+    robots: state.rrReducer.robots,
+    isPending: state.rrReducer.isPending,
+    error: state.rrReducer.error
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSearchRobot:(event)=>sfAction(dispatch,event.target.value),
+    onRobotsRequest:() => dispatch(rrAction())
+  }
+}
 
 class App extends Component {
-    constructor() {
-      super();
-      this.state = {
-          robots:[],
-          searchfield:''
-      };
-    }
     componentDidMount() {
-      fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users => this.setState({ robots: users }))
-    }
-    onSearchRobot= (event)=>{
-        this.setState({ searchfield: event.target.value });
+      this.props.onRobotsRequest()
     }
     render() {
-      const {robots,searchfield} = this.state
+      const {searchField,onSearchRobot,robots,isPending} = this.props
       const filteredRobots = robots.filter((robot)=>{
-        return robot.name.toLowerCase().includes(searchfield.toLowerCase())
+        return robot.name.toLowerCase().includes(searchField.toLowerCase())
       })
-      if(robots.length===0){
+      if(isPending){
         return <h1 className='tc'>Loading!</h1>
       } else {
         return (
           <div className='tc'>
             <h1>RoboSearch</h1>
-            <SearchBox searchrobot={this.onSearchRobot}/>
+            <SearchBox searchrobot={onSearchRobot}/>
             <Scroll>
                 <ErrorBoundary>
                    <CardList robots={filteredRobots}/>
@@ -44,4 +50,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default connect(mapStateToProps,mapDispatchToProps)(App);
