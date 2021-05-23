@@ -7,5 +7,5 @@ A web app that built with React and Redux. This app fetches data from Robohash A
 3. Run `npm start`
 
 ## Screenshots
-![Robots List](https://i.postimg.cc/d0kTB4wn/Robots-list.png)
-![Search Robot](https://i.postimg.cc/fRg9m6nJ/Search-robot.png)
+[![Robots-list.png](https://i.postimg.cc/d0kTB4wn/Robots-list.png)](https://postimg.cc/rdTmyGdt)
+[![Search-robot.png](https://i.postimg.cc/fRg9m6nJ/Search-robot.png)](https://postimg.cc/LJL5MQsp)
