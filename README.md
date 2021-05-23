@@ -1,3 +1,3 @@
 # Robosearch
 
- A web app that uses Reactjs, Robohash API and NPM to build a sorting robots app. Deployed on Heroku. 
+A web app that built with React and Redux. This app fetches data from Robohash API and then display it. Along with this you can search through it and get real-time filtered data as you type. Deployed on Heroku.
