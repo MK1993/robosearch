@@ -4,6 +4,6 @@ A web app that built with React and Redux. This app fetches data from Robohash A
 
 Usage guide:
 
-    Clone this repo
-    Run npm install
-    Run npm start
+1. Clone this repo
+2. Run npm install
+3. Run npm start
