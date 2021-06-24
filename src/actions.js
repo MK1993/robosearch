@@ -1,11 +1,6 @@
 import {CHANGE_SEARCH_FIELD,REQUEST_ROBOTS_PENDING,REQUEST_ROBOTS_SUCCESS,REQUEST_ROBOTS_FAILURE} from './constants'
 
-export const sfAction = (dispatch,text)=> {
-    return dispatch({
-        type: CHANGE_SEARCH_FIELD,
-        payload: text
-    })
-}
+export const sfAction=(o,t)=>o({type:CHANGE_SEARCH_FIELD,payload:t});
 
 export const rrAction = () => (dispatch) => {
     dispatch({type: REQUEST_ROBOTS_PENDING})
