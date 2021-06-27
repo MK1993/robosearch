@@ -1,2 +1,0 @@
-(this.webpackJsonprobofriends=this.webpackJsonprobofriends||[]).push([[6],{32:function(e,r,s){"use strict";s.r(r);s(0);var t=s(1);r.default=function(e){var r=e.searchrobot;return Object(t.jsx)("input",{className:"ba b--light-green bg-light-green pa3",type:"search",placeholder:"search robots",onChange:r})}}}]);
-//# sourceMappingURL=6.6ff66d2d.chunk.js.map

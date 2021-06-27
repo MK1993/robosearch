@@ -1,0 +1,2 @@
+(this.webpackJsonprobosearch=this.webpackJsonprobosearch||[]).push([[6],{32:function(e,r,a){"use strict";a.r(r);a(0);var s=a(1);r.default=function(e){var r=e.searchrobot;return Object(s.jsx)("input",{className:"ba b--light-green bg-light-green pa3",type:"search",placeholder:"search robots",onChange:r})}}}]);
+//# sourceMappingURL=6.8fec63ae.chunk.js.map
