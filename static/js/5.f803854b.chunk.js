@@ -1,0 +1,2 @@
+(this.webpackJsonprobosearch=this.webpackJsonprobosearch||[]).push([[5],{33:function(r,e,o){"use strict";o.r(e);o(0);var s=o(1);e.default=function(r){return Object(s.jsx)("div",{style:{border:"1px solid black",height:"800px",overflowY:"scroll"},children:r.children})}}}]);
+//# sourceMappingURL=5.f803854b.chunk.js.map
